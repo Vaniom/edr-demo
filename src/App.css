@@ -1,38 +1,93 @@
-.App {
-  text-align: center;
+App {
+  font-family: 'Montserrat', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*--------------Header Styles-------------------*/
+.header-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #0F265C;
+  color: #ffffff;
+  padding: 2% 5%;
+  border-bottom: 10px solid #8793AE;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav {
+  width: 300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48;
+  align-self: center;
+}
+
+.company-name {
+  font-family: 'Righteous', cursive;
+  font-size: 20pt;
+  margin-bottom: 10px;
+}
+
+.edr-button {
+  background-color: #fff;
+  cursor: pointer;
+  padding: 3px 6px;
+  border-radius: 5px;
+  color: #0F265C;
+  font-weight: 700;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.edr-button:hover {
+  background-color: #8793AE;
+  color: #000;
+}
+
+.icon-btn {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  cursor: pointer;
+  transition: color 0.5s, transform 0.5s;
 }
 
-.App-link {
-  color: #61dafb;
+.icon-btn:hover {
+  color: #8793AE;
+  transform: scale(1.2);
+}
+.icon-title {
+  font-size: 7pt;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 767px) {
+  .header-wrapper {
+    display: block;
+    text-align: center;
   }
-  to {
-    transform: rotate(360deg);
+  .nav {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  .logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .do-not-display-on-mobile {
+    display: none;
+  }
+  .company-name {
+    font-size: 13pt;
   }
 }
+
+/*----------------------End of Header Styles---------------*/
