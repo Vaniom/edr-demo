@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import Header from "./components/Header";
 import Brand from "./components/Brand";
 import Home from "./components/Home";
