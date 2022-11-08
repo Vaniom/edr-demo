@@ -2,9 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Header = () => {
+    
   return (
     <div className="header-wrapper">
-      <div className="logo">
+      <div className="logo" id="logo">
         <div className="company-name">
        EDR Showdailies
        </div>
@@ -41,7 +42,8 @@ const Header = () => {
         </Link>
       </div>
     </div>
-  )
+  );
 }
+
 
 export default Header;
