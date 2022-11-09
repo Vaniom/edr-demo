@@ -16,7 +16,7 @@ class Loader extends React.Component {
   }
 
   onLoadingChange = () => {
-      if (this.props.loading != this.state.loading){
+      if (this.props.loading !== this.state.loading){
         this.setState({ loading: this.props.loading})
       }
     }
@@ -26,7 +26,7 @@ class Loader extends React.Component {
     }
 
   render() {
-    const loadingProps = this.props.loading;
+    //const loadingProps = this.props.loading;
     return (
       <div className="sweet-loading">
         <BounceLoader
