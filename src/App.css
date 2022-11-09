@@ -170,3 +170,8 @@
   color: blue;
   font-size: 8;
 }
+
+.post-date {
+  font-style: italic;
+  font-size: 10pt;
+}

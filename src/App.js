@@ -6,6 +6,7 @@ import News from "./components/News";
 import Videos from "./components/Videos";
 import Footer from "./components/Footer";
 import Ads from "./components/Ads";
+import SinglePost from "./components/SinglePost";
 
 import { 
   BrowserRouter as Router, 
@@ -28,6 +29,7 @@ function App() {
               <Route path="/news" element={<News />} />
               <Route path="/videos" element={<Videos />} />
               <Route path="/magazine" element={<Magazine />} />
+              <Route path="/news/post" element={<SinglePost />} />
             </Routes>
           </div>
         </div>

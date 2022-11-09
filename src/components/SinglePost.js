@@ -1,21 +1,22 @@
 import React, { Component } from "react";
 import Loader from "./Loader";
 
-class Videos extends Component {
+class SinglePost extends Component {
   constructor(props){
     super(props);
     this.state = {
       loading: true,
-    };
+      post: {},
+    }
   }
-
   render() {
     return(
-      <div>
-        <Loader loading={this.state.loading}/>
+      <div className="singlepost-container">
+        SinglePost
+        <Loader loading={this.state.loading} />
       </div>
     )
   }
 }
 
-export default Videos;
+export default SinglePost
