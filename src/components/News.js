@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react';
+import React, { Component } from 'react';
 import axios from 'axios';
 import Loader from "./Loader";
 
@@ -51,7 +51,7 @@ export class News extends Component {
   }
 
    render() {
-       const {posts, isLoaded} = this.state;
+       const {posts} = this.state;
        return (
            <div className="posts-list">
             <Loader loading={this.state.loading}/>

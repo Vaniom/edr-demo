@@ -51,9 +51,9 @@ class Home extends Component {
       }
 
   render() {
-    const {news_posts, news_isLoaded} = this.state;
-    const {videos, video_isLoaded} = this.state;
-    const {magazines, magazine_isLoaded} = this.state;
+    const {news_posts} = this.state;
+    const {videos} = this.state;
+    const {magazines} = this.state;
     return(
       <div>
         <h3 className="latest-news">Latest News</h3>
