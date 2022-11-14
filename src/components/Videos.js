@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Loader from "./Loader";
+//import Loader from "./Loader";
 
 class Videos extends Component {
   constructor(props){
@@ -12,7 +12,7 @@ class Videos extends Component {
   render() {
     return(
       <div>
-        <Loader loading={this.state.loading}/>
+          Videos
       </div>
     )
   }
