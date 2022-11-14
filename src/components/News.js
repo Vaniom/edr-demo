@@ -2,7 +2,7 @@ import React, { Component, useState } from 'react';
 import axios from 'axios';
 import Loader from "./Loader";
 
-const ReadMore = ({ children }) => {
+/*const ReadMore = ({ children }) => {
   const text = children[1];
   const [isReadMore, setIsReadMore] = useState(true);
   const toggleReadMore = () => {
@@ -16,7 +16,7 @@ const ReadMore = ({ children }) => {
       </span>
     </p>
   );
-};
+};*/
 
 export class News extends Component {
    state = {
@@ -26,7 +26,7 @@ export class News extends Component {
    }
 
  componentDidMount () {
- axios.get('https://headless-wp.florentpia.net/wp-json/wp/v2/posts?_embed&categories_exclude=146')// categorie 146 = Show dailies
+ axios.get('https://headless-wp.florentpia.net/wp-json/wp/v2/posts?_embed&categories_exclude=146,151')// categorie 146 = Show dailies 151 = videos
        .then(res => this.setState({
            posts: res.data,
            isLoaded: true,

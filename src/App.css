@@ -185,3 +185,38 @@
 .show {
   display: block;
 }
+
+.post-preview figure {
+  margin: 0 0;
+  text-align: center;
+}
+
+.post-preview figure.wp-block-image img {
+  max-width: 80%;
+  height: auto;
+  margin: 0 auto;
+}
+
+
+.post-preview .wp-block-embed__wrapper iframe, .post-preview iframe {
+  width: 100%;
+  height: calc((100vw -2%) * 0.562);
+}
+
+.video-featured-image {
+  width: 30%;
+}
+
+.magazine-post {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 8%;
+}
+
+.magazine-post .featured-image {
+  width: 30%;
+}
+
+.metadata-container {
+  padding: 1% 3%;
+}

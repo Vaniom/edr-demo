@@ -19,6 +19,7 @@
 .env.production.local
 *.code-workspace
 edr-demo.code-workspace
+yt-api-key.js
 
 npm-debug.log*
 yarn-debug.log*
