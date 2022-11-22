@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import Loader from "./Loader";
+import Card from "./Card";
 
 export class Magazine extends Component {
    state = {
@@ -27,15 +27,9 @@ export class Magazine extends Component {
        const {posts} = this.state;
        return (
            <div className="magazine-posts-list">
-            <Loader loading={this.state.loading}/>
                {posts.map(post =>
-               <div key={post.id} className="magazine-post">
-                  { this.checkFeaturedImage( post._embedded['wp:featuredmedia'][0].source_url ) }
-                  <div className='metadata-container'>
-                    <h4 dangerouslySetInnerHTML={{ __html: post.title.rendered }}></h4>
-                    <p className="post-date">{new Date(post.date).toUTCString()}</p>
-                    <p dangerouslySetInnerHTML={{ __html: post.content.rendered }} ></p>
-                  </div>
+               <div key={post.id} className="magazine-post"> 
+                    <Card postId={ post.id }/>
                </div>
                )}
            </div>

@@ -18,7 +18,7 @@ import Loader from "./Loader";
   );
 };*/
 
-export class News extends Component {
+class News extends Component {
    state = {
        posts: [],
        isLoaded: false,
@@ -26,7 +26,7 @@ export class News extends Component {
    }
 
  componentDidMount () {
- axios.get('https://headless-wp.florentpia.net/wp-json/wp/v2/posts?_embed&categories_exclude=146,151')// categorie 146 = Show dailies 151 = videos
+ axios.get('https://headless-wp.florentpia.net/wp-json/wp/v2/posts?per_page=20&_embed&categories_exclude=146,151')// categorie 146 = Show dailies 151 = videos
        .then(res => this.setState({
            posts: res.data,
            isLoaded: true,

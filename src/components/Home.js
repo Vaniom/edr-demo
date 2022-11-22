@@ -81,7 +81,7 @@ class Home extends Component {
                </div>
                )}
 
-        <h3 classname="latest-issue">Latest Issue</h3>
+        <h3 className="latest-issue">Latest Issue</h3>
         <Loader loading={this.state.magazine_loading}/>
         {magazines.map(post =>
                <div key={post.id} className="magazine-post">

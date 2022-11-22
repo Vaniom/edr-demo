@@ -1,6 +1,13 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Loader from "./Loader";
+import {
+  EmailShareButton,
+  FacebookShareButton,
+  LinkedinShareButton,
+  TwitterShareButton,
+  WhatsappShareButton
+} from "react-share";
 
 export class Videos extends Component {
    state = {
@@ -29,6 +36,7 @@ export class Videos extends Component {
                   <h4 dangerouslySetInnerHTML={{ __html: post.title.rendered }}></h4>
                   <p className="post-date">{new Date(post.date).toUTCString()}</p>
                   <p dangerouslySetInnerHTML={{ __html: post.content.rendered }} ></p>
+                  <TwitterShareButton children={post.title.rendered} url="http://localhost:3000/videos"/>
                </div>
                )}
            </div>

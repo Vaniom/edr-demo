@@ -6,13 +6,14 @@ import News from "./components/News";
 import Videos from "./components/Videos";
 import Footer from "./components/Footer";
 import Ads from "./components/Ads";
-
+import SinglePost from "./components/SinglePost";
 import { 
   BrowserRouter as Router, 
   Routes, 
   Route 
 } from "react-router-dom";
 import './App.css';
+
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
               <Route path="/news" element={<News />} />
               <Route path="/videos" element={<Videos />} />
               <Route path="/magazine" element={<Magazine />} />
+              <Route path="/post/:id" element={<SinglePost />} />
             </Routes>
           </div>
         </div>

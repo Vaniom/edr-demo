@@ -191,7 +191,8 @@
   text-align: center;
 }
 
-.post-preview figure.wp-block-image img {
+.post-preview figure.wp-block-image img,
+.single_post_featured_image {
   max-width: 80%;
   height: auto;
   margin: 0 auto;
@@ -207,7 +208,7 @@
   width: 30%;
 }
 
-.magazine-post {
+.magazine-post>div {
   display: flex;
   flex-direction: row;
   margin-bottom: 8%;
