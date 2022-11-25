@@ -30,6 +30,7 @@
   'GRAD' 0,
   'opsz' 48;
   align-self: center;
+  cursor: pointer;
 }
 
 .company-name {
@@ -178,12 +179,16 @@
   font-size: 10pt;
 }
 
-.hide{
+.hide, .social-share-container, .share-message{
   display: none;
 }
 
 .show {
   display: block;
+}
+
+.visible {
+  display: inline-block;
 }
 
 .post-preview figure {
@@ -220,4 +225,31 @@
 
 .metadata-container {
   padding: 1% 3%;
+}
+
+.closeBtn {
+  text-align: right;
+  color: #0F265C;
+  font-size: 9pt;
+  margin-bottom: 30px;
+}
+
+.social-share-icon {
+  margin-right: 20px;
+  color:#0F265C;
+  font-size: 16pt;
+}
+.share {
+  padding: 20px 3%;
+  background-color: lightgray;
+}
+
+.share-message {
+  color:#0F265C;
+  font-style: italic;
+  font-size: 14pt;
+}
+
+.share-generic-btn {
+  margin-right: 50px;
 }

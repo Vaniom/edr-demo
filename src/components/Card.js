@@ -1,6 +1,5 @@
 import axios from "axios";
 import React, {Component} from "react";
-import Loader from "./Loader";
 import {Link} from "react-router-dom";
 
 class Card extends Component {
@@ -14,6 +13,8 @@ postId = this.props.postId;
 checkFeaturedImage = (el) => {
   if (el) { return (<img src= { el } alt="featured" className="video-featured-image" />)}
 };
+
+featured = this.props.featured;
 
 fetchFeaturedImage = () => {
   axios.get(this.state.post._links['wp:featuredmedia'][0].href)
@@ -34,18 +35,35 @@ fetchFeaturedImage = () => {
     }
     render(){
       const url = "/post/" + this.state.post.id;
-      return(
+
+      if (this.featured === "true") {
+        return(
           <div>
-            <Loader loading={this.state.loading} />
             {this.state.featuredImage.date && (<img src={ this.state.featuredImage.source_url} alt="featured" className="video-featured-image" />)}
             <div  className='metadata-container'>
             {this.state.post.title && (<h4 dangerouslySetInnerHTML={{ __html: this.state.post.title.rendered }}></h4>)}
             <p className="post-date">{new Date(this.state.post.date).toUTCString()}</p>
             { this.state.post.content && (<p dangerouslySetInnerHTML={{ __html: this.state.post.content.rendered }} ></p>)}
-            <Link to={url} ><button>see</button></Link>
+            <Link to={url} >
+              <span className="material-symbols-outlined">more_horiz</span>
+            </Link>
             </div>
           </div>
       )
+      } else {
+        return(
+          <div>
+            <div  className='metadata-container'>
+            {this.state.post.title && (<h4 dangerouslySetInnerHTML={{ __html: this.state.post.title.rendered }}></h4>)}
+            <p className="post-date">{new Date(this.state.post.date).toUTCString()}</p>
+            { this.state.post.content && (<p dangerouslySetInnerHTML={{ __html: this.state.post.content.rendered }} ></p>)}
+            <Link to={url} >
+              <span className="material-symbols-outlined">more_horiz</span>
+            </Link>
+            </div>
+        </div>
+        )
+      }
     }
 }
 

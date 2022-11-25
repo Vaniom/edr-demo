@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Card from "./Card";
+import Loader from './Loader';
 
 export class Magazine extends Component {
    state = {
@@ -27,9 +28,10 @@ export class Magazine extends Component {
        const {posts} = this.state;
        return (
            <div className="magazine-posts-list">
+            <Loader loading={this.state.loading} />
                {posts.map(post =>
                <div key={post.id} className="magazine-post"> 
-                    <Card postId={ post.id }/>
+                    <Card postId={ post.id } featured="true"/>
                </div>
                )}
            </div>
